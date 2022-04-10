@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
+	<!-- <script defer src="<?php echo get_template_directory_uri()."/js/script.js";?>"> </script>
+	<script defer src="<?php echo get_template_directory_uri()."/js/jquery.js";?>"> </script> -->
 	<title><?php echo wp_title(''); ?></title>
     <?php wp_head()?>
 </head>

@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <main>
     <section>
         <div class="container">
@@ -24,13 +25,18 @@
                                     <i class="fa fa-tag"></i> <a href="<?php echo get_permalink(); ?>"><?php the_tags(''); ?></a>
                                 </li>
                             </ul>
+
+
                             <p><?php echo wp_trim_excerpt(); ?></p>
                         </article>
                         <?php
                     }
-
+                    ?>
+                        <?php get_template_part('pagination');?>
                 </div>
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </section>
 </main>
+<?php get_footer(); ?>

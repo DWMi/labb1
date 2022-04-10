@@ -1,6 +1,6 @@
-/* General styles
------------------------------------------------------------------- */
-
+/* 
+Theme Name:labb1
+ */
 * {
 	outline: none;
 }
@@ -36,7 +36,7 @@ label {
 input[type="text"],
 input[type="email"] {
 	display: block;
-	min-width: 200px;
+	min-width: 150px;/*<-------ändrat av mig*/
 }
 
 input[type="submit"] {
@@ -89,6 +89,7 @@ textarea {
 		}
 
 			#header form input[type="text"] {
+				
 			}
 
 			#header form input[type="submit"] {
@@ -328,7 +329,22 @@ article .meta {
 		list-style: none;
 		padding: 10px 0;
 	}
+/*----------------- Lagt till av mig-----------*/
+.page_item, .cat_item{
+	list-style: none;
+}
+#menu-sidenavbarkat, #menu-sidenavbarsidor {
+	padding-inline-start:0px;
+}
+.screen-reader-text{
+	position: relative;
+	clip-path: initial;
+	height: 30px;
+	overflow: auto;
+	width: auto;
+}
 
+/* ------------------------------ */
 .searchform-wrap {
 	margin-bottom: 30px;
 }
@@ -383,7 +399,7 @@ article .meta {
 }
 
 .pagination {
-	margin: 30px 0 0;
+	margin: 30px; /*<-----ändrat av mig */
 	text-align: center;
 	width: 100%;
 }
@@ -391,8 +407,20 @@ article .meta {
 	.pagination h2 {
 		display: none;
 	}
+/* ------------ändrat av mig---------- */
+	.pagination > .nav-links > .page-numbers {
+		background-color: crimson;
+		color: white;
+		display: inline-block;
+		margin: 0 5px;
+		padding: 5px 10px;
+	}
 
-	.pagination > .page-numbers {
+		.pagination > .nav-links > .page-numbers.current {
+			background-color: white;
+			color: crimson;
+		}
+	.pagination >  .page-numbers {
 		background-color: crimson;
 		color: white;
 		display: inline-block;
@@ -404,7 +432,7 @@ article .meta {
 			background-color: white;
 			color: crimson;
 		}
-
+/* ---------------------------------------- */
 @media ( max-width: 768px ) {
 
 .pagination {
@@ -423,12 +451,12 @@ article .meta {
 	#sidebar > ul {
 		border-bottom: solid 1px black;
 		margin: 0;
-		padding: 30px 30px 0;
+		padding: 30px 30px 30px; /*<------Ändrat av mig*/
 	}
 
 		#sidebar > ul > li {
 			list-style: none;
-			margin-bottom: 30px;
+			margin-bottom: 15px;/*<--- ändrat av mig*/
 		}
 
 			#sidebar > ul > li > ul {
@@ -469,7 +497,11 @@ article .meta {
 
 /* Footer styles
 ------------------------------------------------------------------ */
-
+/* ----------lagt till av mig---------- */
+.col-xs-12{
+	list-style-type: none;
+}
+/* ------------------------------- */
 #footer {
 	background-color: #333;
 	color: white;

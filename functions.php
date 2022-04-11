@@ -19,7 +19,7 @@ add_action('after_setup_theme', 'register_my_menu');
 
 // registerar mina sidebars
 function register_my_sidebars(){
-
+//  footer👇
 register_sidebar(
     [
         'name'=>'kortomoss',
@@ -49,6 +49,7 @@ register_sidebar(
     ]
     );
 
+// sidomeny i bloggen 👇
 register_sidebar(
     [
         'name'=>'sidor',
@@ -70,21 +71,15 @@ register_sidebar(
         'description'=>'kategori i sidebar',
     ]
     );
+register_sidebar(
+    [
+        'name'=>'searchform',
+        'id'=>'sea4',
+        'description'=>'searchform i sidebar',
+    ]
+    );
 };
 add_action( 'widgets_init', 'register_my_sidebars' );
 
-// Lägger till en counter efter kategori i sidebar.
-function count_the_title($title, $post_ID)
-{
-    if( 'nav_menu_item' == get_post_type($post_ID) )
-    {
-        if( 'taxonomy' == get_post_meta($post_ID, '_menu_item_type', true) && 'category' == get_post_meta($post_ID, '_menu_item_object', true) )
-        {
-            $category = get_category( get_post_meta($post_ID, '_menu_item_object_id', true) );
-            $title .= sprintf(' (%d)', $category->count);
-        }
-    }
-    return $title;
-}
-add_filter('the_title', 'count_the_title', 10, 2);
+
 ?>

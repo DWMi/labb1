@@ -2,8 +2,9 @@
     <div id="sidebar">
         <ul>
             <li>
-                <!-- hämtar searhform.php -->
-                <?php get_template_part('searchform');?>                
+            <?php dynamic_sidebar('sea4'); ?>
+                <!-- hämtar searchform.php -->
+                <!-- <?php get_template_part('searchform');?>                 -->
             </li>
         </ul>
         <ul role="navigation">
@@ -15,17 +16,12 @@
                         'menu_class'=> 'menu',
                     )); ?>
                 <li>
-                    <!-- hämtar sidebar widget "rubrik" -->
+                    <!-- hämtar sidebar widget "arkiv" -->
                     <?php dynamic_sidebar('arkiv');?>
                 </li>
                 <li class="categories">
-                    <!-- hämtar sidebar widget "rubrik" och "navbar" meny med katergorier -->
+                    <!-- hämtar sidebar widget "kaetgori" -->
                     <?php dynamic_sidebar('kategori');?>
-                    <?php wp_nav_menu(array(
-                        'theme_location' => 'sidenavbarKat',
-                        'menu_class' => 'menu'
-                    ));
-                    ?>
                 </li>
             </li>
         </ul>

@@ -12,6 +12,7 @@
 					<?php } ?>
 				</div>
 				<aside id="secondary" class="col-xs-12 col-md-3">
+					<!-- hämtar sidomeny i undersida -->
 					<?php wp_nav_menu(array(
             		'theme_location' => 'sidomeny',
             		'menu_class' => 'side-menu',

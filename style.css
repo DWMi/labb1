@@ -2,6 +2,7 @@
 Theme Name:labb1
  */
 * {
+	
 	outline: none;
 }
 
@@ -36,7 +37,7 @@ label {
 input[type="text"],
 input[type="email"] {
 	display: block;
-	min-width: 150px;/*<-------ändrat av mig*/
+	min-width: 200px
 }
 
 input[type="submit"] {
@@ -47,6 +48,21 @@ textarea {
 	min-width: 200px;
 }
 
+/* lagt till av mig👇  */
+.wpcf7-form input, .wpcf7-form textarea {
+	width: 200px;
+}
+
+.wpcf7-form textarea {
+	height: 46px;
+}
+
+.wpcf7-form input[type="submit"] {
+	width: 57px;
+}
+
+
+/* -------------------- */
 /* Header styles
 ------------------------------------------------------------------ */
 
@@ -485,7 +501,7 @@ article .meta {
 		width: 100%;
 	}
 
-		#sidebar input[type="text"] {
+		#sidebar input[type="search"] {
 			color: black;
 			padding: 0 5px;
 		}
@@ -494,10 +510,26 @@ article .meta {
 			background-color: crimson;
 			margin-top: 10px;
 		}
-
+		/* lagt till av mig  */
+		.wp-block-search__inside-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+		
+		.wp-block-search__button {
+			height: 30px;
+			margin-left: 0px;
+			background-color: crimson;
+			color: white;
+			border: 1px solid crimson;
+		
+		}
+		/*  */
 /* Footer styles
 ------------------------------------------------------------------ */
 /* ----------lagt till av mig---------- */
+
 .col-xs-12{
 	list-style-type: none;
 }
